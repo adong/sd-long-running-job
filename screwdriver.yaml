@@ -5,7 +5,9 @@ jobs:
     main:
         requires: [~pr, ~commit]
         steps:
-            - step1:  sleep 5 && echo ok
+            - step1:  |
+                labelVersion = VERSION_1.0.11.1111111111
+                meta set label ${labelVersion}
             - step2:  sleep 5 && echo ok
 
     long:
