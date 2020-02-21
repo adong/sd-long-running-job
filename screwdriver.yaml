@@ -1,0 +1,15 @@
+shared:
+    image: node:12
+
+jobs:
+    main:
+        requires: [~pr, ~commit]
+        steps:
+            - step1:  sleep 5 && echo ok
+            - step2:  sleep 5 && echo ok
+
+    long:
+        requires: main
+        steps:
+            - step1:  sleep 100 && echo ok
+            - step1:  sleep 200 && echo ok
