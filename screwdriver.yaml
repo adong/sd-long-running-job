@@ -12,4 +12,4 @@ jobs:
         requires: main
         steps:
             - step1:  sleep 100 && echo ok
-            - step1:  sleep 200 && echo ok
+            - step2:  sleep 200 && echo ok
